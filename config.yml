@@ -9,4 +9,5 @@ office: Bürgerservicecenter
 # The full name and amount of services for which
 # you would like to make an appointment
 services:
-  'Beantragung eines Reisepasses': 1
+  'Anmeldung einer Hauptwohnung inkl. einer KfZ-Ummeldung (Anzahl der Familienmitglieder anklicken)': 1
+  'Beantragung eines Bewohnerparkausweises': 1
