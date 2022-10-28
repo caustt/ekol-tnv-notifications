@@ -1,6 +1,6 @@
 # The base URL of the eKOL-TNV service
 # (excluding any session identifiers etc.)
-url: https://egov.potsdam.de/tnv/
+url: https://egov.potsdam.de/tnv/?START_OFFICE=buergerservice
 
 # The full name of the respective office, e.g.
 # Citizen’s Service or Driver’s License Office
@@ -9,5 +9,4 @@ office: Bürgerservicecenter
 # The full name and amount of services for which
 # you would like to make an appointment
 services:
-  'Anmeldung einer Hauptwohnung inkl. einer KfZ-Ummeldung (Anzahl der Familienmitglieder anklicken)': 1
-  'Beantragung eines Bewohnerparkausweises': 1
+  'Anmeldung einer Haupt- oder Nebenwohnung (Anzahl der Familienmitglieder anklicken)': 1
