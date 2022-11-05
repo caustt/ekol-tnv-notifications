@@ -39,12 +39,10 @@ const timeZone = 'Europe/Berlin';
   if (expandButton) {
     await expandButton.click();
   }
-
   // Select office
   await page.click(
-    `.searchTreeItemChild:has-text('${config.office}') button:has-text("Termin vereinbaren")`
+    `button:below(:text('${config.office}'))`
   );
-
   // Select services
   for (const [label, value] of Object.entries(config.services)) {
     await page.selectOption(`text=${label}`, value.toString());
@@ -56,8 +54,8 @@ const timeZone = 'Europe/Berlin';
   await page.click('button:has-text("Weiter")');
 
   // Find available dates
-  await page.waitForSelector('.ekolCalendarContainer');
-  const available = await page.$$('.eKOLCalendarButtonDayFreeX');
+  await page.waitForSelector('.ekolCalendar_Container');
+  const available = await page.$$('.ekolCalendar_ButtonDayFreeX');
 
   if (available.length <= 0) {
     console.log('Exiting as no appointments are available.');
@@ -72,7 +70,7 @@ const timeZone = 'Europe/Berlin';
         const timestamp = parts[parts.length - 1];
 
         const slotsContainer = await element.$(
-          '.ekolCalendarFreeTimeContainer'
+          '.ekolCalendar_FreeTimeContainer'
         );
         const slotsCount = parseInt(await slotsContainer.textContent());
 
